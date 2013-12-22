@@ -1,0 +1,30 @@
+{{#package}}
+package {{toString}}
+{{/package}}
+
+{{! The one import we'll always need}}
+import java.util.logging.Logger;
+
+{{#imports}}
+import {{packageToImport}};
+{{/imports}}
+
+public class {{superType}}Impl {{inheritenceType}} {{superType}} {
+	
+	private static final String sourceClass = {{superType}}Impl.class.getName();
+	private static final Logger logger = Logger.getLogger(sourceClass);
+	
+	{{#methods}}
+	@Override
+	{{visibility}} {{#returnType}}{{returnType}}{{/returnType}}{{^returnType}}void{{/returnType}} {{name}}({{arguments}}) {
+		final String sourceMethod = "{{name}}";
+		logger.entering(sourceClass, sourceMethod);
+		
+		//TODO Default implementation 
+		
+		logger.exiting(sourceClass, sourceMethod);
+		{{#returnType}}return null;{{/returnType}}
+	}
+	
+	{{/methods}}
+}
