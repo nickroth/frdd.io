@@ -3,7 +3,7 @@
 *The latest revolution in acronym based development methodologies*
 
 ## What's here?
-Just a simple repo to collect larger code examples from [my blog](www.frdd.io).
+Just a simple repo to collect larger code examples from [my blog](http://www.frdd.io).
 
 ## Project Listing
 
